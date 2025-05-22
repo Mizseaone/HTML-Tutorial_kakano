@@ -1,15 +1,17 @@
 <h1>ユーザー登録</h1>
 
 <form action="/submit" method="POST">
-  <label for="username">ユーザー名:</label><br>
+  <label for="username" >ユーザー名:</label><br>
   
-  <!-- 下のインプットフォームに入力値チェックを追加する -->
+  <!-- ユーザー名は 4文字 以上 10文字以下 となるようにバリデーションを設定してみましょう。 -->
   <input 
     type="text" 
     id="username" 
     name="username" 
     placeholder="ユーザー名を入力してください"
-    
+    minlength="4"
+    maxlength="10"
+    required
   >
 
   <input type="submit" value="送信">
